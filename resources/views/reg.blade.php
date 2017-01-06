@@ -35,8 +35,23 @@
             <p> 输入用户信息 </p>
             {{csrf_field()}}
             <input name="name" type="text" autofocus="" placeholder="User Name" class="form-control">
+            @if($errors->first('name'))
+                <div class="alert alert-danger">
+                    <li>{{$errors->first('name')}}</li>
+                </div>
+            @endif
             <input name="password" type="password" placeholder="Password" class="form-control">
-            <input name="password_conf" type="password" placeholder="Re-type Password" class="form-control">
+            @if($errors->first('password'))
+                <div class="alert alert-danger">
+                    <li>{{$errors->first('password')}}</li>
+                </div>
+            @endif
+            <input name="password_confirmation" type="password" placeholder="Re-type Password" class="form-control">
+            @if($errors->first('password_confirmation'))
+                <div class="alert alert-danger">
+                    <li>{{$errors->first('password_confirmation')}}</li>
+                </div>
+            @endif
             <label class="checkbox">
                 <input type="checkbox" value="agree this condition">我同意你们网站的协议
             </label>
@@ -56,7 +71,6 @@
     </form>
 
 </div>
-
 
 
 <!-- Placed js at the end of the document so the pages load faster -->
