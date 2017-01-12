@@ -63,9 +63,9 @@ class UserController extends Controller
         }
         $userInfo = UserInfo::find($user_id);
         if ($user->id == Auth::user()->id) {
-            return view('profile_this', ['user' => Auth::user()->toArray(), 'userInfo' => $userInfo->toArray()]);
+            return view('profile_this', ['thisUser' => Auth::user()->toArray(), 'user' => Auth::user()->toArray(), 'userInfo' => $userInfo->toArray()]);
         }
-        return view('profile', ['user' => $user->toArray(), 'userInfo' => $userInfo->toArray()]);
+        return view('profile', ['thisUser' => Auth::user()->toArray(), 'user' => $user->toArray(), 'userInfo' => $userInfo->toArray()]);
     }
 
     public function logout()
@@ -103,10 +103,12 @@ class UserController extends Controller
             $json['msg'] = '请重新登录后再上传头像';
             return response()->json($json);
         }
-        $path = $request->profilePhoto->store('/images/profile_photo/' . date('Y') . '/' . date('m') . '/' . date('d'));
+        $ext = $request->profilePhoto->extension();
+        $ext = $ext == 'jpeg' ? '.jpg' : '.' . $ext;
+        $path = $request->profilePhoto->storeAs('/images/profile_photo/' . date('Y') . '/' . date('m') . '/' . date('d'), md5(time()) . rand(1, 10000) . $ext);
         if ($path) {
             $userInfo = UserInfo::where('user_id', $user_id)->first();
-            unlink($userInfo->profile_photo);
+            @unlink($userInfo->profile_photo);
             $userInfo->update(['profile_photo' => $path]);
             $json['data']['src'] = url($path);
             return response()->json($json);
