@@ -263,8 +263,11 @@
                             <div class="panel">
                                 <div class="panel-body">
                                     <div class="profile-pic text-center">
-                                        <img alt="" src="{{asset('images/photos/user1.png')}}">
-                                        <input type="file" name="file（可随便定义）" class="layui-upload-file">
+                                        <img alt="" src="{{asset($userInfo['profile_photo'])}}">
+                                        <form method="post">
+                                        <input type="hidden" value="xxxx" name="_token">
+                                        <input type="file" name="profilePhoto" class="layui-upload-file" xsh-csrf="{{csrf_token()}}">
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -292,7 +295,8 @@
                                             <li>
                                                 <div class="title" style="height: 38px;line-height: 38px;">生日</div>
                                                 <div class="layui-inline">
-                                                    <input value="{{date('Y-m-d',$userInfo['birthday'])}}" name="birthday" class="layui-input" placeholder="生日"
+                                                    <input value="{{date('Y-m-d',$userInfo['birthday'])}}"
+                                                           name="birthday" class="layui-input" placeholder="生日"
                                                            onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})">
                                                 </div>
                                             </li>
@@ -505,15 +509,15 @@
 <script src="{{ asset('js/scripts.js')}}"></script>
 <script src="{{ asset('./layui/layui.js')}}"></script>
 <script>
-
+    var profilePhotoUrl = '{{url("upprofilephoto/{$user['id']}")}}';
     layui.use('laydate', function () {
         var laydate = layui.laydate;
     });
-    layui.use('upload', function(){
+    layui.use('upload', function () {
         layui.upload({
-            url: ''
-            ,success: function(res, input){
-                console.log(res); //如：{"code":0 ,"msg":"","url":"http://cdn.abc.com/123.jpg"'}
+            url: profilePhotoUrl
+            , success: function (res, input) {
+                $('.profile-pic img').attr('src',res.data.src);
             }
         });
     });

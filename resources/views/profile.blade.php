@@ -24,7 +24,7 @@
 <section>
 
     <!-- main content start-->
-    <div class="main-content" style="margin-left: 0px;" >
+    <div class="main-content" style="margin-left: 0px;">
 
         <!-- header section start-->
         <div class="header-section" style="left: 0px;">
@@ -35,7 +35,7 @@
 
             <!--search start-->
             <form class="searchform" action="index.html" method="post">
-                <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+                <input type="text" class="form-control" name="keyword" placeholder="Search here..."/>
             </form>
             <!--search end-->
 
@@ -56,7 +56,9 @@
                                             <div>Database update</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="40" role="progressbar"
+                                                 class="progress-bar progress-bar-warning">
                                                 <span class="">40%</span>
                                             </div>
                                         </div>
@@ -68,7 +70,9 @@
                                             <div>Dashboard done</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
+                                            <div style="width: 90%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="90" role="progressbar"
+                                                 class="progress-bar progress-bar-success">
                                                 <span class="">90%</span>
                                             </div>
                                         </div>
@@ -80,7 +84,9 @@
                                             <div>Web Development</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
+                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="66" role="progressbar"
+                                                 class="progress-bar progress-bar-info">
                                                 <span class="">66% </span>
                                             </div>
                                         </div>
@@ -92,7 +98,9 @@
                                             <div>Mobile App</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
+                                            <div style="width: 33%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="33" role="progressbar"
+                                                 class="progress-bar progress-bar-danger">
                                                 <span class="">33% </span>
                                             </div>
                                         </div>
@@ -104,7 +112,8 @@
                                             <div>Issues fixed</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="80" role="progressbar" class="progress-bar">
                                                 <span class="">80% </span>
                                             </div>
                                         </div>
@@ -124,16 +133,19 @@
                             <ul class="dropdown-list normal-list">
                                 <li class="new">
                                     <a href="">
-                                        <span class="thumb"><img src="{{asset('images/photos/user1.png')}}" alt="" /></span>
+                                        <span class="thumb"><img src="{{asset('images/photos/user1.png')}}"
+                                                                 alt=""/></span>
                                         <span class="desc">
-                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+                                          <span class="name">John Doe <span
+                                                      class="badge badge-success">new</span></span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="{{asset('images/photos/user2.png')}}" alt="" /></span>
+                                        <span class="thumb"><img src="{{asset('images/photos/user2.png')}}"
+                                                                 alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Jonathan Smith</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -142,7 +154,8 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="{{asset('images/photos/user3.png')}}" alt="" /></span>
+                                        <span class="thumb"><img src="{{asset('images/photos/user3.png')}}"
+                                                                 alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Jane Doe</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -151,7 +164,8 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="{{asset('images/photos/user4.png')}}" alt="" /></span>
+                                        <span class="thumb"><img src="{{asset('images/photos/user4.png')}}"
+                                                                 alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Mark Henry</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -160,7 +174,8 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="{{asset('images/photos/user5.png')}}" alt="" /></span>
+                                        <span class="thumb"><img src="{{asset('images/photos/user5.png')}}"
+                                                                 alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Jim Doe</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -213,13 +228,13 @@
                     </li>
                     <li>
                         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{asset('images/photos/user-avatar.png')}}" alt="" />
+                            <img src="{{asset('images/photos/user-avatar.png')}}" alt=""/>
                             {{$user['name']}}
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                            <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                             <li><a href="{{url('logout')}}"><i class="fa fa-sign-out"></i>退出</a></li>
                         </ul>
                     </li>
@@ -247,7 +262,7 @@
                             <div class="panel">
                                 <div class="panel-body">
                                     <div class="profile-pic text-center">
-                                        <img alt="" src="{{asset('images/photos/user1.png')}}">
+                                        <img alt="" src="{{asset($userInfo['profile_photo'])}}">
                                     </div>
                                 </div>
                             </div>
@@ -257,24 +272,24 @@
                                 <div class="panel-body">
                                     <ul class="p-info">
                                         <li>
-                                            <div class="title">Gender</div>
-                                            <div class="desk">Male</div>
+                                            <div class="title">用户名</div>
+                                            <div class="desk">{{$user['name']}}</div>
                                         </li>
                                         <li>
-                                            <div class="title">Founder</div>
-                                            <div class="desk">ABC Inc.</div>
+                                            <div class="title">昵称</div>
+                                            <div class="desk">{{$userInfo['nickname'] or '没有设置昵称'}}</div>
                                         </li>
                                         <li>
-                                            <div class="title">Education</div>
-                                            <div class="desk">BSC. in CSE</div>
+                                            <div class="title">生日</div>
+                                            <div class="desk">{{$userInfo['birthday']==null?'没有设置生日':date('Y-m-d',$userInfo['birthday'])}}</div>
                                         </li>
                                         <li>
-                                            <div class="title">Project Done</div>
-                                            <div class="desk">50+</div>
+                                            <div class="title">标签</div>
+                                            <div class="desk">{{$userInfo['tag'] or '没有设置标签'}}</div>
                                         </li>
                                         <li>
-                                            <div class="title">Skills</div>
-                                            <div class="desk">HTML, CSS, JavaScript.</div>
+                                            <div class="title">爱好</div>
+                                            <div class="desk">{{$userInfo['hobby'] or '没有设置爱好'}}</div>
                                         </li>
                                     </ul>
                                 </div>
@@ -291,9 +306,13 @@
                                         <h1>john doe</h1>
                                         <span class="designation">PRODUCT DESIGNER (UX / UI / Visual Interaction)</span>
                                         <p>
-                                            I have 10 years of experience designing for the web, and specialize in the areas of user interface design, interaction design, visual design and prototyping. I’ve worked with notable startups including Pearl Street Software.
+                                            I have 10 years of experience designing for the web, and specialize in the
+                                            areas of user interface design, interaction design, visual design and
+                                            prototyping. I’ve worked with notable startups including Pearl Street
+                                            Software.
                                         </p>
-                                        <a class="btn p-follow-btn pull-left" href="#"> <i class="fa fa-check"></i> Following</a>
+                                        <a class="btn p-follow-btn pull-left" href="#"> <i class="fa fa-check"></i>
+                                            Following</a>
 
                                         <ul class="p-social-link pull-right">
                                             <li>
@@ -321,7 +340,8 @@
                         <div class="col-md-12">
                             <div class="panel">
                                 <form>
-                                    <textarea class="form-control input-lg p-text-area" rows="2" placeholder="Whats in your mind today?"></textarea>
+                                    <textarea class="form-control input-lg p-text-area" rows="2"
+                                              placeholder="Whats in your mind today?"></textarea>
                                 </form>
                                 <footer class="panel-footer">
                                     <button class="btn btn-post pull-right">Post</button>
@@ -360,7 +380,8 @@
                                                 <img src="{{asset('images/photos/user1.png')}}" alt=""/>
                                             </div>
                                             <div class="activity-desk">
-                                                <h5><a href="#">Jonathan Smith</a> <span>Uploaded 5 new photos</span></h5>
+                                                <h5><a href="#">Jonathan Smith</a> <span>Uploaded 5 new photos</span>
+                                                </h5>
                                                 <p class="text-muted">7 minutes ago near Alaska, USA</p>
                                                 <div class="album">
                                                     <a href="#">
@@ -380,7 +401,8 @@
                                                 <img src="{{asset('images/photos/user2.png')}}" alt=""/>
                                             </div>
                                             <div class="activity-desk">
-                                                <h5><a href="#">John Doe</a> <span>Completed the Sight visit.</span></h5>
+                                                <h5><a href="#">John Doe</a> <span>Completed the Sight visit.</span>
+                                                </h5>
                                                 <p class="text-muted">2 minutes ago near Alaska, USA</p>
                                                 <div class="location-map">
                                                     <div id="map-canvas"></div>
@@ -406,7 +428,8 @@
                                             </div>
                                             <div class="activity-desk">
 
-                                                <h5><a href="#">Jonathan Smith</a> <span>completed the task “wireframe design” within the dead line</span></h5>
+                                                <h5><a href="#">Jonathan Smith</a> <span>completed the task “wireframe design” within the dead line</span>
+                                                </h5>
                                                 <p class="text-muted">4 days ago near Alaska, USA</p>
                                             </div>
                                         </li>
@@ -417,7 +440,8 @@
                                             </div>
                                             <div class="activity-desk">
 
-                                                <h5><a href="#">Jonathan Smith</a> <span>was absent office due to sickness</span></h5>
+                                                <h5><a href="#">Jonathan Smith</a> <span>was absent office due to sickness</span>
+                                                </h5>
                                                 <p class="text-muted">4 days ago near Alaska, USA</p>
                                             </div>
                                         </li>

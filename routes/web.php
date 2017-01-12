@@ -24,3 +24,4 @@ Route::get('logout','UserController@logout');
 Route::get('loginid','UserController@loginId');
 Route::post('profile/{user_id}','UserController@updateProfile')->middleware('auth');
 Route::get('loginid/{user_id}','UserController@loginId');
+Route::post('upprofilephoto/{user_id}','UserController@upProfilePhoto');
