@@ -63,9 +63,9 @@ class UserController extends Controller
         }
         $userInfo = UserInfo::find($user_id);
         if ($user->id == Auth::user()->id) {
-            return view('profile_this', ['user' => Auth::user()->toArray(),'userInfo'=>$userInfo->toArray()]);
+            return view('profile_this', ['thisUser' => Auth::user()->toArray(), 'user' => Auth::user()->toArray(), 'userInfo' => $userInfo->toArray()]);
         }
-        return view('profile', ['user' => $user->toArray(),'userInfo'=>$userInfo->toArray()]);
+        return view('profile', ['thisUser' => Auth::user()->toArray(), 'user' => $user->toArray(), 'userInfo' => $userInfo->toArray()]);
     }
 
     public function logout()
@@ -78,7 +78,7 @@ class UserController extends Controller
     {
         Auth::logout();
         Auth::loginUsingId($user_id);
-        return redirect()->route('profile',['user_id'=>$user_id]);
+        return redirect()->route('profile', ['user_id' => $user_id]);
     }
 
     public function updateProfile(Request $request, $user_id)
@@ -92,6 +92,29 @@ class UserController extends Controller
         } else {
             $request->session()->flash('updateProfile', '请不要乱改');
         }
-        return redirect()->route('profile',['user_id'=>$user_id]);
+        return redirect()->route('profile', ['user_id' => $user_id]);
+    }
+
+    public function upProfilePhoto(Request $request, $user_id)
+    {
+        $json = ['code' => 200, 'msg' => '上传成功'];
+        if ($user_id != Auth::user()->id) {
+            $json['code'] = 2001;
+            $json['msg'] = '请重新登录后再上传头像';
+            return response()->json($json);
+        }
+        $ext = $request->profilePhoto->extension();
+        $ext = $ext == 'jpeg' ? '.jpg' : '.' . $ext;
+        $path = $request->profilePhoto->storeAs('/images/profile_photo/' . date('Y') . '/' . date('m') . '/' . date('d'), md5(time()) . rand(1, 10000) . $ext);
+        if ($path) {
+            $userInfo = UserInfo::where('user_id', $user_id)->first();
+            @unlink($userInfo->profile_photo);
+            $userInfo->update(['profile_photo' => $path]);
+            $json['data']['src'] = url($path);
+            return response()->json($json);
+        }
+        $json['code'] = 2002;
+        $json['msg'] = '保存错误';
+        return response()->json($json);
     }
 }
